@@ -1,0 +1,24 @@
+
+    <label for="user-name">Username:
+        <input type="text" name="username" [formControl]="username">
+    </label>
+    <label for="email">Email:
+        <input type="email" name="email" [formControl]="email">
+    </label>
+    <label for="password">Password:
+        <input type="text" name="password" [formControl]="password">
+    </label>
+    <label for="address"> Address:
+        <div>
+            <label for="street">Street address:
+                <input type="text" name="street" [formControl]="street">
+            </label>
+            <label for="zip">Zip code:
+                <input type="text" name="zip" [formControl]="zip">
+            </label>
+            <label for="city">City:
+                <input type="text" name="city" [formControl]="city">
+            </label>
+        </div>
+    </label>
+    <button (click)="onSubmit()">Sign in</button>
