@@ -9,7 +9,8 @@ import { User } from '../user.models';
 })
 export class UserComponent  {
 
- 
+ user: User = new User ("", "", "", "", "", "")
+  
     username = new FormControl('');
     email = new FormControl('');
     password = new FormControl('');
@@ -20,7 +21,7 @@ export class UserComponent  {
 
 
   onSubmit() {
-    console.log(this.username.value, this.email.value, this.password.value, this.street.value, this.zip.value, this.city.value);
+    this.user = new User(this.username.value!, this.email.value!, this.password.value!, this.street.value!, this.zip.value!, this.city.value!);
   }
 
 }
